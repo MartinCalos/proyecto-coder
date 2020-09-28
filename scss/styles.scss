@@ -1,22 +1,26 @@
-// Todos mis imports
-@import 'variables';
-@import 'global';
 
-/** colores a usar #**/
-$colores: #000000, #ffffff, #636363, #c7c7c7
+/**colores a usar **/
 
-@each $valor in $colores {
-	.colores-#{$valor} {
-		color: $valor;
-	}
-}
+$blanco: #ffffff;
+$negro: #000000;
+$gris-oscuro: #636363;
+$gris-claro: #c7c7c7;
+$rojo: #e21c21;
+
+/**font titulo**/
+
+$font-titulo: 'Roboto' , sans-serif;
+
+/*Font textos blancos*/
+$atalata: 'Atalata', sans-serif;
+$textos-alt: 'Open Sans condensed', sans-serif;
 
 .gradiente-negro-gris {
-	background: linear-gradient(#000000, #636363)
+	background: linear-gradient($negro, $gris-oscuro)
 }
 
 .gradiente-gris-negro {
-	background: linear-gradient(#636363, #000000)	
+	background: linear-gradient($gris-oscuro, $negro)	
 }
 
 body {
@@ -24,31 +28,31 @@ body {
 }
 
 .texto-blanco {
-	color: #ffffff
+	color: $blanco;
 	text-align: center;
-	font-family: 'Alata', sans-serif;
-	font-family: 'Open Sans condensed', sans-serif;
+	font-family: $atalata;
+	font-family: $textos-alt;
 	font-size: 100%;
 	letter-spacing: 5px;
 	word-spacing: 8px;
 }
 
 .fondo-gris-oscuro {
-	background: #636363
+	background: $gris-oscuro;
 	padding: 20px;
 }
 
 .texto-blanco-izq {
-	color: #ffffff;
-	font-family: 'Alata', sans-serif;
-	font-family: 'Open Sans condensed', sans-serif;
+	color:$blanco;
+	font-family: $atalata;
+	font-family: $textos-alt;
 	font-size: 100%;
 	letter-spacing: 5px;
 	word-spacing: 8px;
 }
 
 .fondo-gris-claro {
-	background: #c7c7c7
+	background: $gris-claro;
 	padding: 20px;	
 }
 
@@ -61,15 +65,15 @@ ul {
 }
 
 h2 {
-	color: #e21c21
+	color: $rojo;
 	text-align: left;
-	font-family: 'Alata', sans-serif;
-	font-size: 200%
+	font-family: $atalata;
+	font-size: 200%;
 	font-weight:bold;
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	word-spacing: 15px;
-	border-bottom: solid 2px #e21c21
+	border-bottom: solid 2px $rojo;
 	display: inline-block;
 	margin: 15px;
 }	
@@ -80,10 +84,10 @@ h2 {
 }
 
 .titulo {
-	color: #e21c21
+	color: $rojo;
 	text-align: left;
-	font-family: 'Roboto', sans-serif;
-	font-size: 300%
+	font-family: $font-titulo;
+	font-size: 300%;
 	font-weight:bold;
 	text-transform: uppercase;
 	letter-spacing: 5px;
@@ -130,8 +134,8 @@ header {
 
 .nav-header .ul-header li a {
 	margin: 2px;
-	color: #ffffff;
-	font-family: 'Alata', sans-serif;
+	color: $blanco;
+	font-family: $atalata;
 	text-transform: uppercase;
 }
 
@@ -141,10 +145,10 @@ header {
 }
 
 .texto-marca {
-	color: #ffffff;
+	color: $blanco;
 	text-align: center;
-	font-family: 'Alata', sans-serif;
-	font-family: 'Open Sans condensed', sans-serif;
+	font-family: $atalata;
+	font-family: $textos-alt;
 	font-size: 200%;
 	letter-spacing: 5px;
 	word-spacing: 8px;	
@@ -152,10 +156,10 @@ header {
 }
 
 .texto-productions {
-	color: #ffffff;
+	color: $blanco;
 	text-align: center;
-	font-family: 'Alata', sans-serif;
-	font-family: 'Open Sans condensed', sans-serif;
+	font-family: $atalata;
+	font-family: $textos-alt;
 	font-size: 100%;
 	letter-spacing: 5px;
 	word-spacing: 8px;	
@@ -169,7 +173,7 @@ header {
 }
 
 .fondo-somos {
-	background: linear-gradient (to bottom, black, white);
+	background: linear-gradient (to bottom, $negro, $blanco);
 }
 
 .imagen-nosotros {
@@ -182,7 +186,7 @@ header {
 }
 
 table th td {
-	border: 2px solid black;
+	border: 2px solid $negro;
 }
 
 textarea input select {
@@ -191,7 +195,7 @@ textarea input select {
 }
 
 .borde-contacto {
-	border: 1px solid black;
+	border: 1px solid $negro;
 }
 
 .seccion-clientes {
@@ -249,8 +253,8 @@ iframe {
 
 .div-footer {
 	position: absolute;
-	background: #d9dbd7
-	color: #000000;
+	background: $gris-claro;
+	color: $negro;
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -270,7 +274,42 @@ iframe {
 }
 
 
+.card {
+    width: 450px;
+    height: 100px;
+    margin: 5px;
+}
 
+.imagen-cliente {
+	width: auto;
+    height: 100px;
+    margin: 20px;
+}
 
+.section {
+    margin: 10px;
+    padding: 10px;
+}
 
+.card-center {
+    justify-content: center;
+}
 
+.nav {
+    background-color: $gris-oscuro;
+}
+
+.logo-nav {
+    float: left;
+    width: 30px;
+    height: auto;
+}
+
+.botones {
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	width: 100%;
+	margin:auto;   
+}
