@@ -170,10 +170,7 @@ th {
 }
 
 .cards {
-	width: 180px;
-	height: 220px;
 	background-color: $gris-claro;
-	margin: 10px;
 }
 
 .card-img {
@@ -242,6 +239,8 @@ iframe {
 	padding: 20px;
 }
 
+
+
 /**contacto final**/
 
 /**footer inicio**/
@@ -261,6 +260,10 @@ iframe {
 .imagen-redes {
 	width: 30px;
 	height: 30px;
+}
+
+.blanco {
+	color: $blanco;
 }
 
 @media  (min-width:500px) and  (max-width: 767.98px) {
